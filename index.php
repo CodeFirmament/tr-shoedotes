@@ -1,3 +1,7 @@
+<?php
+  include_once ("comp/navbar.php");
+  include_once ("comp/footer.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,72 +30,54 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@Shoes_shop_w">
 <meta name="twitter:creator" content="@Shoes_shop_w">
-<meta name="twitter:title" content="Sho.es: A ficticial shoes shop">
+<meta name="twitter:title" content="Sho.es: find your comfort">
 <meta name="twitter:description" content="We are your place for good deals for shoes">
 <meta name="twitter:image" content="res/img/logos/shodotes.png">
 
   <!--Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Personalized files-->
+<link rel="stylesheet" href="comp/styles/base.css">
+
 </head>
 
 <body id="welcome-bg">
-  <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
-      <a class="navbar-brand" href="#">
-        <img style="background-color:black" src="res/img/logos/shodotes.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-        Sho.es
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#" title="Inicio">
-                Who we are
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Publicaciones/2019/El-arte-ASCII.html" title="Publicaciones">
-                Shop
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Biblioteca/index.html" title="Biblioteca">
-                Jobs
-            </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" title="Noticias">
-                  Log In
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" title="Foros">
-                  Sign Up
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#" title="Foros">
-                  Find Us
-              </a>
-          </li>
-        </ul>
 
-      </div>
-    </nav>
-
+    <?php
+      echo get_navbar();
+     ?>
     <Header>
-      <div class="container-fluid">
+      <div class="container-fluid p-5 my-4 pbg-blueBase">
         <h1 class= "justify-content-center">sho.es</h1>
         <h2 class= "justify-content-center">We offer you the best shoes on your area</h2>
       </div>
     </Header>
 
+    <section>
+      <div class="container pt-3 pb-3 mx-auto">
+        <h2>Sho.es care about your style</h2>
+        <div class="row">
+          <div class="col">
+            <p>We have been in the industry 15 years ago, where the foundator John Lemon started out his own
+            business startup along in the noisy city of New York.</p>
+            <p> We got the experience in knowing what
+            our customers want offering them a good service at every moment!</p>
+          </div>
+          <div class="col">
+            <img src="res/img/stock/001.jpg" width="480" height="336" class="rounded mx-auto d-block" title="Photo by Elevate Digital from Pexels" alt="An error ocurred :(">
+          </div>
+        </div>
+      </div>
+    </section>
+    <?php
+      echo get_footer();
+    ?>
 </body>
 </html>

@@ -1,5 +1,9 @@
-div.pbg-blueBase {
+.pbg-blueBase {
   background-color: #b6e6f8;
+}
+
+.pbg-dark {
+  background-color: black;
 }
 
 a {

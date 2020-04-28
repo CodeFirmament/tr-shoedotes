@@ -4,8 +4,12 @@ body#welcome-bg{
 
 }
 
-div.pbg-blueBase{
+.pbg-blueBase{
   background-color: $blue-base;
+}
+
+.pbg-dark{
+  background-color: black;
 }
 
 a{

@@ -3,7 +3,7 @@
     return '
         <nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-center">
         <a class="navbar-brand" href="#">
-          <img style="background-color:black" src="res/img/logos/shodotes.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img style="background-color:black" src="/res/img/logos/shodotes.png" width="30" height="30" class="d-inline-block align-top" alt="">
           Sho.es
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -12,32 +12,32 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" title="Inicio">
+              <a class="nav-link" href="/" title="Meet us">
                   Who we are
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Publicaciones/2019/El-arte-ASCII.html" title="Publicaciones">
+              <a class="nav-link" href="#" title="find our offers">
                   Shop
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Biblioteca/index.html" title="Biblioteca">
+              <a class="nav-link" href="#" title="we are open to hire people">
                   Jobs
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" title="Noticias">
+                <a class="nav-link" href="#" title="Hello again :)">
                     Log In
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" title="Foros">
+                <a class="nav-link" href="/signup/" title="Join us">
                     Sign Up
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" title="Foros">
+                <a class="nav-link" href="#" title="Where are we?">
                     Find Us
                 </a>
             </li>

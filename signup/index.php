@@ -60,10 +60,20 @@
     </Header>
 
     <section>
-      <div class="container justify-content-center mt-5 mb-3 mx-auto">
-
+      <div class="container border mt-5 mb-5 w-50 mx-auto pt-2 pb-2">
+        <form action="/comp/controller.php" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="hello@thisismy.mail" name="email">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="abc123" name="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </section>
+    <div class="gspacet">
+    </div>
     <?php
       echo get_footer();
     ?>

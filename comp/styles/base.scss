@@ -4,10 +4,16 @@ body#welcome-bg{
 
 }
 
-.pbg-blueBase{
-  background-color: $blue-base;
-}
+div{
 
+  &.gspacet{
+    margin-top: 20vw;
+  }
+
+  &.pbg-blueBase{
+    background-color: $blue-base;
+  }
+}
 .pbg-dark{
   background-color: black;
 }

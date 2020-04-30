@@ -13,11 +13,11 @@
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="/" title="Meet us">
-                  Who we are
+                  Who are we?
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" title="find our offers">
+              <a class="nav-link" href="/store/" title="find our offers">
                   Shop
               </a>
             </li>

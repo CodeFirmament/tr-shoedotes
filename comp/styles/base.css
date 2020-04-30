@@ -1,8 +1,22 @@
+#g-recaptcha-response {
+  display: block !important;
+  position: absolute;
+  margin: -78px 0 0 0 !important;
+  width: 302px !important;
+  height: 76px !important;
+  z-index: -999999;
+  opacity: 0;
+}
+
 div.gspacet {
   margin-top: 20vw;
 }
 div.pbg-blueBase {
   background-color: #b6e6f8;
+}
+div.g-recaptcha {
+  margin: auto;
+  width: 50%;
 }
 
 .pbg-dark {

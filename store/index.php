@@ -1,6 +1,7 @@
 <?php
   include_once ("../comp/navbar.php");
   include_once ("../comp/footer.php");
+  include_once "../comp/shop.php";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +56,22 @@
     <?php
       echo get_navbar();
      ?>
-  
 
+     <header>
+       <div class="container-fluid mb-4 text-center">
+         <h1>Sho.es Shop</h1>
+         <h4>Your style; your world</h4>
+       </div>
 
+     </header>
+     <section>
+     <div class="container text-center">
+      <?php
+        echo get_items();
+      ?>
+    </div>
+
+  </section>
     <?php
       echo get_footer();
     ?>

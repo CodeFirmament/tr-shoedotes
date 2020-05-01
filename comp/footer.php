@@ -1,6 +1,6 @@
 <?php
 function get_footer(){
-  echo '
+  return '
   <footer>
     <div class="container-fluid pbg-dark text-white pt-2 pr-3 pl-3 pb-1">
       <div class="form-inline">

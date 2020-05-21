@@ -1,6 +1,4 @@
 <?php
-
-// obtain SESSION data, operate depending on them
 require_once 'dev/login.php';
 
   function get_navbar(){

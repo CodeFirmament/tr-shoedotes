@@ -18,8 +18,8 @@ function item_format(string $name, int $price, string $src): string{
    <img src="'.$src.'"alt="image" class="img-thumbnail">
    <div class="card-body">
      <h4 class="card-title">'.$name.'</h4>
+     <input type="hidden" id="shoeId" name="shoeId" value="01">
      <p class="card-text">Price:'.$price.'€</p>
-     <a href="#" class="btn btn-primary">Comprar</a>
    </div>
  </div>
   ';

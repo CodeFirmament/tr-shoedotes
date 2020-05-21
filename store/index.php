@@ -1,7 +1,7 @@
 <?php
   include_once ("../comp/navbar.php");
   include_once ("../comp/footer.php");
-  include_once "../comp/shop.php";
+  include_once "../comp/shop_layout.php";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,9 +65,22 @@
 
      </header>
      <section>
+     <div class="container-fluid mb-4 text-center">
+         <?php
+         if(is_session_active()){
+            echo session_shop();
+         } 
+         ?>
+     </div>
      <div class="container text-center">
       <?php
-        echo get_items();
+      if(is_session_active()){
+        // form
+        echo '<a href="#" class="btn btn-primary">Buy</a>';
+        //end form
+      }else{
+        echo view_shop();
+      }
       ?>
     </div>
 

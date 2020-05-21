@@ -26,6 +26,11 @@ function item_format(string $name, int $price, string $src): string{
   return $item;
 }
 
+function query_items(): array{
+  
+  return [];
+}
+
 function get_items(): string{
 $items = [];
 $item_list = [];

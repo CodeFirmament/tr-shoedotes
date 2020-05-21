@@ -42,8 +42,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<!--reCaptcha-->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <!-- Personalized files-->
 <link rel="stylesheet" href="/comp/styles/base.css">
@@ -57,22 +55,13 @@
      ?>
     <Header>
       <div class="container p-5 my-4">
-        <h1 class= "text-center">sign up to sho.es</h1>
+        <h1 class= "text-center">Login to sho.es</h1>
         <?php
         if(isset($_GET["msg"])){
           $error = $_GET["msg"];
           switch ($error) {
             case 'fail':
-              echo "<p class= 'text-center' >Something happened :(</p>";
-              break;
-            case 'capfail':
-              echo "<p class= 'text-center' >try again, with less wires this time</p>";
-            break;
-            case 'wfail':
-              echo "<p class= 'text-center' >Huh, i'm not supossed to be showed</p>";
-            break;
-            default:
-              echo "<p class= 'text-center' >wow we got a hacker</p>";
+              echo "<p class= 'text-center' >Something went wrong</p>";
               break;
           }
         }else{echo "<p class= 'text-center' ></p>";}
@@ -84,13 +73,12 @@
       <div class="container border mt-5 mb-5 w-50 mx-auto pt-2 pb-2">
         <form action="/comp/controller.php" method="post">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="hello@thisismy.mail" name="email" required>
+            <input type="email" class="form-control" placeholder="hello@thisismy.mail" name="EMAIL" required>
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" placeholder="" name="password" required>
+            <input type="password" class="form-control" placeholder="" name="PASSWORD" required>
           </div>
-          <div class="g-recaptcha" data-theme="dark" data-size="normal" data-sitekey="6LdKo_AUAAAAALri6Bazb40r1EM1sQbhMcaUZ2iP"></div>
-          <button type="submit" class="btn btn-primary" name="submit">Register me!</button>
+          <button type="submit" class="btn btn-primary" name="submit">Log in!</button>
         </form>
       </div>
     </section>

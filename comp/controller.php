@@ -2,12 +2,22 @@
 include_once 'dev/login.php';
 include_once 'dev/redirection.php';
 
-function control_login($email, $password){
+function control_create_user($email, $password){
   create_user($email, $password);
 }
 
+function control_login($email, $password){
+  login($email, $password);
+}
 
-if($_POST["email"] && $_POST["password"]){
+if($_POST["EMAIL"] && $_POST["PASSWORD"]){
+
+  $email = $_POST["EMAIL"];
+  $password = $_POST["PASSWORD"];
+
+  control_login($email, $password);
+
+}else if($_POST["email"] && $_POST["password"]){
 
   $email = $_POST["email"];
   $password = $_POST["password"];
@@ -24,7 +34,7 @@ if($_POST["email"] && $_POST["password"]){
   // should return JSON with success as true
   if($responseKeys["success"]) {
     if($email && $password && $captcha){
-        control_login($email, $password);
+      control_create_user($email, $password);
     }else{redirect("/signup/?msg=wfail");}
   }else{redirect("/signup/?msg=capfail");}
 

@@ -76,16 +76,31 @@ class database{
 
 
       if($exec->execute()){
+
+        switch ($mode) {
+          case 'i':
+            $completed = true;
+          break;
+          case 'ro':
+            if($exec->get_result()->num_rows > 0){
+              $completed = true;
+            }
+          break;
+        }
+        /*
         if(strcmp ($mode,"i") == 0){
           $completed = true;
         }
+
+        if(strcmp ($mode,"ro") == 0){
+          if($exec->get_result()->num_rows > 0){
+                $completed = true;
+          }
+        } */
+
       }
 
-      if(strcmp ($mode,"ro") == 0){
-        if($sentencia->get_result()->num_rows > 0){
-              $completed = true;
-        }
-      }
+      
 
 
 

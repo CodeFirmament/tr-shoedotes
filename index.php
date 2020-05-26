@@ -1,6 +1,7 @@
 <?php
   include_once ("comp/navbar.php");
   include_once ("comp/footer.php");
+  include_once "comp/scriptwallet.php";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,3 +82,6 @@
     ?>
 </body>
 </html>
+<?php
+      script_wallet()
+      ?>

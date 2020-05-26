@@ -32,26 +32,26 @@ function query_items(): array{
 }
 
 function get_items(): string{
-$items = [];
-$item_list = [];
-$items_HTML = "";
+  $items = [];
+  $item_list = [];
+  $items_HTML = "";
 
-array_push($items,["sandalias",45,"sandals1.jpg"],["zapatos",32,"shoes1.jpg"],["tennis",46,"sneakers1.jpg"]);
+  array_push($items,["sandalias",45,"sandals1.jpg"],["zapatos",32,"shoes1.jpg"],["tennis",46,"sneakers1.jpg"]);
 
-$items_temp = [];
-foreach ($items as $item) {
-  $item = item_format($item[0],$item[1],$item[2]);
-  array_push($items_temp, $item);
-}
+  $items_temp = [];
+  foreach ($items as $item) {
+    $item = item_format($item[0],$item[1],$item[2]);
+    array_push($items_temp, $item);
+  }
 
-$items = $items_temp;
+  $items = $items_temp;
 
-array_push($item_list,group_item_format($items));
+  array_push($item_list,group_item_format($items));
 
-foreach ($item_list as $list) {
-  $items_HTML.=$list;
-}
+  foreach ($item_list as $list) {
+    $items_HTML.=$list;
+  }
 
-return $items_HTML;
+  return $items_HTML;
 }
  ?>

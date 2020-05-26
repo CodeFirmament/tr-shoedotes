@@ -18,7 +18,6 @@ class database{
     }
     $this->success = true;
 
-
   }
 
   public function close_connection(){
@@ -67,7 +66,7 @@ class database{
 
   public function execute_query(string $query, array $params = null,string $mode = "i"){
     $completed = false;
-    if($this->success && $params){
+    if($params){
 
       // evaluate SQL injection somehow
 
@@ -87,29 +86,31 @@ class database{
             }
           break;
         }
-        /*
-        if(strcmp ($mode,"i") == 0){
-          $completed = true;
-        }
-
-        if(strcmp ($mode,"ro") == 0){
-          if($exec->get_result()->num_rows > 0){
-                $completed = true;
-          }
-        } */
 
       }
-
-      
-
-
-
-
-
     }
     return $completed;
   }
 
+  public function obtain_query(string $query, string $mode = "rone"){
+    $ans = "0";
+
+      // evaluate SQL injection somehow
+
+      if($res = $this->connection->query($query)){
+
+        switch ($mode) {
+          case 'rone':
+            if($row = $res->fetch_assoc()){
+              $ans = $row['banco'];
+            }
+          break;
+        }
+
+      }
+    
+    return $ans;
+  }
 
 
 }

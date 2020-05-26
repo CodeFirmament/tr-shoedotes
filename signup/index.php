@@ -1,6 +1,7 @@
 <?php
   include_once ("../comp/navbar.php");
   include_once ("../comp/footer.php");
+  include_once "../comp/scriptwallet.php";
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,5 +101,7 @@
       echo get_footer();
     ?>
 </body>
-<script src="scripts/enable.js" charset="utf-8"></script>
+<?php
+      script_wallet()
+      ?>
 </html>

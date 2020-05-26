@@ -76,7 +76,7 @@ require_once 'dev/login.php';
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" title="your balance">
+                <a class="nav-link" id="nav-bar-wallet" href="#" title="your balance">
                     Wallet
                 </a>
             </li>

@@ -6,7 +6,7 @@ function create_user($email, $password){
   $redirect= "/signup/?msg=fail";
   $conn = databaseFactory::get_connection();
   if($conn->success){
-    if($conn->execute_query("insert into usuario values (?,?)",[$email, $password])){
+    if($conn->execute_query("insert into usuario values (?,?,?)",[$email, $password,0])){
 
       $redirect = "/";
       if(!is_session_active()){
@@ -29,6 +29,23 @@ function login($email, $password){
     }
   }
   redirect($redirect);
+}
+
+function obtain_wallet_value($email){
+  $conn = databaseFactory::get_connection();
+  $answer = $conn->obtain_query("select banco from usuario where correo = '".$email."'");
+  if($answer && $conn->success){
+    return $answer;  
+  }else{return '0';}
+}
+
+function add_to_wallet($email,$value = 5){
+  $conn = databaseFactory::get_connection();
+  if($conn->success){
+    if($conn->execute_query("UPDATE usuario SET banco = banco + ? WHERE correo = ?",[$value,$email],"i")){
+      return  obtain_wallet_value($email);
+    }
+  }
 }
 
 

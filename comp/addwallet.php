@@ -4,6 +4,8 @@ include_once 'dev/login.php';
 $email = $_SESSION["userId"];
 
 
-echo obtain_wallet_value($email);
+echo add_to_wallet($email);
+
+
 
 ?>

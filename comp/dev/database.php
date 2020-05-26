@@ -94,11 +94,9 @@ class database{
 
   public function obtain_query(string $query, string $mode = "rone"){
     $ans = "0";
-
       // evaluate SQL injection somehow
 
       if($res = $this->connection->query($query)){
-
         switch ($mode) {
           case 'rone':
             if($row = $res->fetch_assoc()){

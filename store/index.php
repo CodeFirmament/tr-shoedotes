@@ -69,14 +69,14 @@
      <div class="container-fluid mb-4 text-center">
          <?php
          if(is_session_active()){
-            echo session_shop();
-         } 
+            echo '<p>Buy your shoes by clicking on them!</p> ';
+         }else{ echo '<p>Are you interested on buying? Log in!</p>';}
          ?>
      </div>
      <div class="container text-center">
       <?php
       if(is_session_active()){
-          // list button
+        echo session_shop();
       }else{
         echo view_shop();
       }

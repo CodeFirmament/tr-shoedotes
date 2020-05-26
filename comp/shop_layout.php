@@ -2,12 +2,11 @@
 require_once 'shop.php';
 
 function session_shop(){
-    return 
-    '<p>Buy your shoes by clicking on them!</p> '.get_items();
+    return get_items(true);
 }
 
 function view_shop(){
-    return '<p>Are you interested on buying? Log in!</p>'.get_items();
+    return get_items(false);
 }
 
 ?>

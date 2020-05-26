@@ -76,9 +76,7 @@
      <div class="container text-center">
       <?php
       if(is_session_active()){
-        // form
-        echo '<a href="#" class="btn btn-primary">Buy</a>';
-        //end form
+          // list button
       }else{
         echo view_shop();
       }

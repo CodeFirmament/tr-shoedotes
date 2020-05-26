@@ -103,6 +103,12 @@ class database{
               $ans = $row['banco'];
             }
           break;
+          case 'rmany':
+            $ans = [];
+            while($row = $res->fetch_assoc()){
+              array_push($ans,[$row['nombre'],(int)$row['precio'],$row['URLimagen']]);
+            }
+          break;
         }
 
       }

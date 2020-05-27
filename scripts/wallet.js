@@ -14,11 +14,6 @@ function obtain_wallet() {
 
 }
 
-
-window.onload = function(){
-    this.obtain_wallet();
-}
-
 document.getElementById("nav-bar-wallet").onclick =()=>{
   var xhttp = new XMLHttpRequest();
 
@@ -32,4 +27,8 @@ document.getElementById("nav-bar-wallet").onclick =()=>{
 
     xhttp.open("GET", "/comp/addwallet.php", true);
     xhttp.send();
+}
+
+window.onload = function(){
+  this.obtain_wallet();
 }

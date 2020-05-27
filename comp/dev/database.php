@@ -92,7 +92,7 @@ class database{
     return $completed;
   }
 
-  public function obtain_query(string $query, string $mode = "rone"){
+  public function obtain_query(string $query, string $mode = "rone", string $Rdata = ""){
     $ans = "0";
       // evaluate SQL injection somehow
 
@@ -100,13 +100,13 @@ class database{
         switch ($mode) {
           case 'rone':
             if($row = $res->fetch_assoc()){
-              $ans = $row['banco'];
+              $ans = $row[$Rdata];
             }
           break;
           case 'rmany':
             $ans = [];
             while($row = $res->fetch_assoc()){
-              array_push($ans,[$row['nombre'],(int)$row['precio'],$row['URLimagen']]);
+              array_push($ans,[$row['nombre'],(int)$row['precio'],$row['URLimagen'],$row["id"]]);
             }
           break;
         }

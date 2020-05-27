@@ -101,7 +101,10 @@
       echo get_footer();
     ?>
 </body>
+
+</html>
 <?php
       script_wallet()
       ?>
-</html>
+<script src="scripts/enable.js"></script>
+

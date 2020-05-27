@@ -33,13 +33,13 @@ function login($email, $password){
 
 function obtain_wallet_value($email){
   $conn = databaseFactory::get_connection();
-  $answer = $conn->obtain_query("SELECT banco FROM usuario WHERE correo = '".$email."'");
+  $answer = $conn->obtain_query("SELECT banco FROM usuario WHERE correo = '".$email."'","rone","banco");
   if($answer && $conn->success){
     return $answer;  
   }else{return '0';}
 }
 
-function add_to_wallet($email,$value = 5){
+function modify_wallet($email,$value = 5){
   $conn = databaseFactory::get_connection();
   if($conn->success){
     if($conn->execute_query("UPDATE usuario SET banco = banco + ? WHERE correo = ?",[$value,$email],"i")){
@@ -54,6 +54,27 @@ function obtain_items_array(){
   if($answer && $conn->success){
     return $answer;  
   }else{return false;}
+}
+
+function obtain_item_value($id){
+  $conn = databaseFactory::get_connection();
+  $answer = $conn->obtain_query("SELECT precio FROM producto WHERE id = $id ",'rone','precio');
+  if($answer && $conn->success){
+    return $answer;  
+  }else{return false;}
+}
+
+function is_ok_to_buy($email, $value){
+  $success = false;
+
+  if($value){
+    $conn = databaseFactory::get_connection();
+    $answer = $conn->obtain_query("SELECT banco FROM usuario WHERE 
+                                  correo = '$email' and banco >= $value",'rmany');
+    if($answer && $conn->success){$success =  true;}
+  }
+  
+  return $success;
 }
 
 

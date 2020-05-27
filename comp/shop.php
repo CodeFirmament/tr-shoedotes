@@ -10,19 +10,19 @@ function group_item_format(array $items): string{
     $group.=$item;
   }
 
-  return '<div class="d-flex">'.$group.'</div>';
+  return '<div class="d-flex flex-wrap">'.$group.'</div>';
 }
 
-function item_format(string $name, int $price, string $src): string{
+function item_format(string $name, int $price, string $src, string $id = ""): string{
   $src = "/res/img/shoes/".$src;
   $item = '
   <div class="card" style="width:355px">
    <img src="'.$src.'"alt="image" class="img-thumbnail">
    <div class="card-body">
      <h4 class="card-title">'.$name.'</h4>
-     <input type="hidden" id="shoeId" name="shoeId" value="01">
+     <input type="hidden" id="shoeId" name="shoeId" value="'.$id.'">
      <p class="card-text">Price:'.$price.'€</p>
-     <button>BUY</button>
+     <button class="btn btn-success" >BUY</button>
    </div>
  </div>
   ';
@@ -36,7 +36,6 @@ function item_format_no_button(string $name, int $price, string $src): string{
    <img src="'.$src.'"alt="image" class="img-thumbnail">
    <div class="card-body">
      <h4 class="card-title">'.$name.'</h4>
-     <input type="hidden" id="shoeId" name="shoeId" value="01">
      <p class="card-text">Price:'.$price.'€</p>
    </div>
  </div>
@@ -59,7 +58,7 @@ if($button){
 
     $items_temp = [];
     foreach ($items as $item) {
-      $item = item_format($item[0],$item[1],$item[2]);
+      $item = item_format($item[0],$item[1],$item[2],$item[3]);
       array_push($items_temp, $item);
     }
   
@@ -77,7 +76,6 @@ if($button){
   }
 }else{
   if($items_query = obtain_items_array()){
-
     foreach ($items_query as $I) {
       array_push($items,$I);
     }

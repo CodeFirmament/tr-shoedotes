@@ -90,6 +90,9 @@
 </body>
      
 </html>
+<script src="/scripts/buy.js"></script>
 <?php
       script_wallet()
-      ?>
+      ?>      
+
+

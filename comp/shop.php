@@ -22,7 +22,7 @@ function item_format(string $name, int $price, string $src, string $id = ""): st
      <h4 class="card-title">'.$name.'</h4>
      <input type="hidden" id="shoeId" name="shoeId" value="'.$id.'">
      <p class="card-text">Price:'.$price.'€</p>
-     <button class="btn btn-success" >BUY</button>
+     <button class="btn btn-success button-items" >BUY</button>
    </div>
  </div>
   ';
@@ -72,7 +72,7 @@ if($button){
   
     return $items_HTML;
   }else{
-    return "<p>something happened :/ </p>";
+    return "<p>something happened ...</p>";
   }
 }else{
   if($items_query = obtain_items_array()){

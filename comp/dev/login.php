@@ -70,7 +70,7 @@ function is_ok_to_buy($email, $value){
   if($value){
     $conn = databaseFactory::get_connection();
     $answer = $conn->obtain_query("SELECT banco FROM usuario WHERE 
-                                  correo = '$email' and banco >= $value",'rmany');
+                                  correo = '$email' and banco >= $value",'rone',"banco");
     if($answer && $conn->success){$success =  true;}
   }
   

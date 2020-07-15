@@ -15,6 +15,7 @@ function obtain_wallet() {
 }
 
 let buttons = document.getElementsByClassName("button-items");
+
 for (i = 0; i< buttons.length;i++) {
     buttons[i].onclick = function(){
         let ProductId = this.parentElement.children[1].getAttribute("value");
